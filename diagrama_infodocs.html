@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DER - Integração Zapsign (InfoDocs)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f7fa;
+        }
+
+        .mermaid {
+            width: 90%;
+            max-width: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mermaid">
+        erDiagram
+            Escola {
+                number creditos_assinatura_restantes "PK"
+                string nome
+            }
+
+            User {
+                string ID "PK"
+                string nome
+                string email
+                string Escola_ID "FK"
+            }
+
+            Documento {
+                string ID "PK"
+                string token_zapsign
+                string titulo
+                file arquivo_assinado
+                string Escola_ID "FK"
+            }
+
+            Assinatura {
+                string ID "PK"
+                string User_ID "FK"
+                string Documento_ID "FK"
+                string sign_url
+                string status
+            }
+
+            Escola ||--o{ User : "possui"
+            Escola ||--o{ Documento : "gera"
+            User o|--o{ Assinatura : "realiza"
+            Documento ||--o{ Assinatura : "contém"
+    </div>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+
+</html>

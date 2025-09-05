@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infodocs | InfoEduc Plus</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,1,0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos-base.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="imagens/infoeduc-logo.png" alt="InfoEduc Plus Logo"> <span>Gestão</span>
+            </div>
+            <i class="material-symbols-outlined">menu</i>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item">
+                    <a href="#"><i class="material-symbols-outlined">home</i> Painel de gestão</a>
+                </li>
+                <li class="sidebar-menu-item active">
+                    <a href="#"><i class="material-symbols-outlined">school</i> Gestão</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#"><i class="material-symbols-outlined">apps</i> Meus aplicativos</a>
+                </li>
+            </ul>
+            <hr class="sidebar-hr">
+            <div class="menu-section-title">Central de ajuda</div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item">
+                    <a href="#"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#"><i class="material-symbols-outlined">book_5</i> Materiais de suporte</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <hr class="sidebar-hr">
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item">
+                    <a href="#"><i class="material-symbols-outlined">settings</i> Configurações</a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#"><i class="material-symbols-outlined">logout</i> Finalizar sessão</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="main-header">
+            <button class="store-button">
+                <i class='bx bx-cart'></i> InfoEduc Store
+            </button>
+            <div class="header-icons">
+                <i class='bx bx-megaphone'></i>
+                <i class='bx bx-question-mark'></i>
+                <i class='bx bx-bell'></i>
+                <div class="user-avatar"></div>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <div class="page-header">
+                <h1>Infodocs</h1>
+                <div class="header-actions-group">
+                    <div class="school-selector">
+                        <i class="material-symbols-outlined">school</i>
+                        <span>Nome da Escola</span>
+                        <i class='bx bx-chevron-down'></i>
+                    </div>
+                    <button class="button-primary" id="open-popup-btn">
+                        <i class='bx bx-plus'></i>
+                        Gerar Documento
+                    </button>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <div class="search-input-container">
+                    <input type="text" placeholder="Pesquisar...">
+                    <i class="material-symbols-outlined">search</i>
+                </div>
+                <div class="filter-controls-group">
+                    <div class="filter-dropdown">
+                        <span>Filtro 1</span>
+                        <i class="material-symbols-outlined">expand_more</i>
+                    </div>
+                    <a href="#" class="more-options-link">
+                        <i class="material-symbols-outlined">more_horiz</i>
+                        <span>Mais opções</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info-cards-container">
+                <div class="info-card card--pendente">
+                    <span class="card-label">Pendente</span>
+                    <span class="card-badge">2</span>
+                </div>
+                <div class="info-card card--assinado">
+                    <span class="card-label">Assinado</span>
+                    <span class="card-badge">4</span>
+                </div>
+                <div class="info-card card--recusado">
+                    <span class="card-label">Recusado</span>
+                    <span class="card-badge">1</span>
+                </div>
+            </div>
+
+
+            <div class="content-container">
+                <div class="table-header">
+                    <div class="header-cell">Nome do Documento</div>
+                    <div class="header-cell">Status</div>
+                    <div class="header-cell">Signatários</div>
+                    <div class="header-cell actions">Ações</div>
+                </div>
+                <div class="table-body">
+                    <div class="table-row">
+                        <div class="data-cell">Contrato de matrícula - Lucas Nascimento Siqueira</div>
+                        <div class="data-cell">
+                            <span class="status-badge status--success">Assinado</span>
+                        </div>
+                        <div class="data-cell">2/2</div>
+                        <div class="data-cell actions">
+                            <i class='bx bx-show' title="Visualizar"></i>
+                            <i class='bx bx-send' title="Reenviar"></i>
+                            <i class='bx bx-trash' title="Excluir"></i>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="data-cell">Termo de uso de imagem - Beatriz Rocha Lima</div>
+                        <div class="data-cell">
+                            <span class="status-badge status--warning">Pendente</span>
+                        </div>
+                        <div class="data-cell">1/2</div>
+                        <div class="data-cell actions">
+                            <i class='bx bx-show' title="Visualizar"></i>
+                            <i class='bx bx-send' title="Reenviar"></i>
+                            <i class='bx bx-trash' title="Excluir"></i>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="data-cell">Autorização de saída - Maria Eduarda Carvalho</div>
+                        <div class="data-cell">
+                            <span class="status-badge status--danger">Recusado</span>
+                        </div>
+                        <div class="data-cell">0/1</div>
+                        <div class="data-cell actions">
+                            <i class='bx bx-show' title="Visualizar"></i>
+                            <i class='bx bx-send' title="Reenviar"></i>
+                            <i class='bx bx-trash' title="Excluir"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-footer"></div>
+            </div>
+
+            <footer class="page-footer">
+                ©2025 InfoEduc Educação 💙🚀
+            </footer>
+        </div>
+    </main>
+
+    <div class="popup-overlay hidden">
+        <div class="popup-container">
+            <button class="popup-close">&times;</button>
+
+            <div id="form-step">
+                <div class="popup-header">
+                    <h2>Gerador de Documentos</h2>
+                    <p class="popup-school-name">Escola: <strong>[Nome da Escola]</strong></p>
+                    <p class="popup-context">📍 Gerando a partir da página: <strong>Infodocs</strong></p>
+                </div>
+
+                <div class="popup-content">
+                    <div class="form-group">
+                        <label for="documento-modelo">Selecione o tipo de documento</label>
+                        <div class="select-wrapper">
+                            <select id="documento-modelo">
+                                <option value="">Selecione...</option>
+                                <option value="relatorio_notas">Relatório de Notas</option>
+                                <option value="declaracao_matricula">Declaração de Matrícula</option>
+                                <option value="contrato_matricula">Contrato de Matrícula</option>
+                                <option value="diario_escolar">Diário Escolar</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="filtros-relatorio" class="conditional-filters hidden">
+                        <label>Filtros obrigatórios</label>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ano-letivo">Ano letivo</label>
+                                <div class="select-wrapper">
+                                    <select id="ano-letivo">
+                                        <option value="">Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="turma">Turma</label>
+                                <div class="select-wrapper">
+                                    <select id="turma">
+                                        <option value="">Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group-checkbox">
+
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="assinatura-checkbox" checked>
+                            <label for="assinatura-checkbox">Enviar este documento para assinatura eletrônica?</label>
+                        </div>
+
+                        <div class="feedback-wrapper">
+                            <span class="signature-feedback">Isso consumirá 1 crédito de assinatura.</span>
+                        </div>
+
+                    </div>
+                    <div id="progresso-assinatura-container" class="progress-container hidden">
+                        <div class="progress-text">
+                            <span>Uso de assinaturas</span>
+                            <strong>3 de 10</strong>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                    <div id="signatarios-contrato" class="conditional-filters hidden">
+                        <label>Selecione os signatários</label>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contrato-gestor">Gestor(a)</label>
+                                <div class="select-wrapper">
+                                    <select id="contrato-gestor">
+                                        <option value="">Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contrato-responsavel">Responsável do Aluno</label>
+                                <div class="select-wrapper">
+                                    <select id="contrato-responsavel">
+                                        <option value="">Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="signatarios-diario" class="conditional-filters hidden">
+                        <label>Selecione os signatários</label>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="diario-gestor">Gestor(a)</label>
+                                <div class="select-wrapper">
+                                    <select id="diario-gestor">
+                                        <option value="">Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="diario-coordenador">Coordenador(a)</label>
+                                <div class="select-wrapper">
+                                    <select id="diario-coordenador">
+                                        <option value="">Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="diario-professor">Professor(a)</label>
+                                <div class="select-wrapper">
+                                    <select id="diario-professor">
+                                        <option value="">Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup-footer">
+                    <button class="popup-submit">Gerar</button>
+                </div>
+            </div>
+
+            <div id="loading-step" class="popup-step hidden">
+                <div class="loader"></div>
+                <p>Gerando documento, por favor aguarde...</p>
+            </div>
+
+            <div id="success-step" class="popup-step hidden">
+                <div class="success-icon">
+                    <i class='bx bx-check'></i>
+                </div>
+                <h3>Documento Gerado!</h3>
+                <p>O documento está pronto para ser assinado por você.</p>
+                <button class="popup-submit" id="go-to-signature-btn">
+                    <i class='bx bxs-pen'></i>
+                    Assinar Agora
+                </button>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // --- ELEMENTOS DO DOM ---
+    const popupOverlay = document.querySelector('.popup-overlay');
+    const openBtn = document.getElementById('open-popup-btn');
+    const closeBtn = document.querySelector('.popup-close');
+
+    // Elementos do Formulário
+    const documentoSelect = document.getElementById('documento-modelo');
+    const assinaturaCheckbox = document.getElementById('assinatura-checkbox');
+    const submitBtn = document.querySelector('.popup-submit');
+
+    // Passos (Steps) do Popup
+    const formStep = document.getElementById('form-step');
+    const loadingStep = document.getElementById('loading-step');
+    const successStep = document.getElementById('success-step');
+
+    // Mapeamento de blocos internos do formulário
+    const blocosCondicionais = {
+        filtros_relatorio: document.getElementById('filtros-relatorio'),
+        signatarios_contrato: document.getElementById('signatarios-contrato'),
+        signatarios_diario: document.getElementById('signatarios-diario')
+    };
+    
+    // CORREÇÃO: Pegamos o container do checkbox pela classe, não pelo ID
+    const checkboxAssinaturaContainer = document.querySelector('.form-group-checkbox'); 
+    
+    // NOVOS ELEMENTOS DE FEEDBACK
+    const assinaturaFeedback = document.querySelector('.signature-feedback'); 
+    const progressoAssinaturaContainer = document.getElementById('progresso-assinatura-container');
+
+
+    // --- FUNÇÕES ---
+
+    // Reseta o popup para o estado inicial (mostrando o formulário)
+    function resetPopup() {
+        formStep.classList.remove('hidden');
+        loadingStep.classList.add('hidden');
+        successStep.classList.add('hidden');
+
+        documentoSelect.value = "";
+        assinaturaCheckbox.checked = false;
+        atualizarVisibilidadeFormulario();
+    }
+
+    // Controla a visibilidade dos campos DENTRO do formulário
+    function atualizarVisibilidadeFormulario() {
+        const valorDocumento = documentoSelect.value;
+        const querAssinatura = assinaturaCheckbox.checked;
+
+        // Esconde todos os blocos condicionais para começar
+        Object.values(blocosCondicionais).forEach(bloco => {
+            if (bloco) bloco.classList.add('hidden');
+        });
+        
+        // CORREÇÃO: Verifica se o elemento existe antes de tentar manipulá-lo
+        if (checkboxAssinaturaContainer) checkboxAssinaturaContainer.classList.add('hidden');
+        if (progressoAssinaturaContainer) progressoAssinaturaContainer.classList.add('hidden');
+        if (assinaturaFeedback) assinaturaFeedback.textContent = '';
+
+
+        if (valorDocumento === 'relatorio_notas') {
+            blocosCondicionais.filtros_relatorio.classList.remove('hidden');
+
+        } else if (valorDocumento === 'contrato_matricula' || valorDocumento === 'diario_escolar') {
+            checkboxAssinaturaContainer.classList.remove('hidden');
+
+            if (querAssinatura) {
+                // Mostra o feedback e a barra de progresso
+                progressoAssinaturaContainer.classList.remove('hidden');
+                assinaturaFeedback.textContent = 'Isso consumirá 1 crédito de assinatura.';
+
+                // Mostra o bloco de signatários correto
+                if (valorDocumento === 'contrato_matricula') {
+                    blocosCondicionais.signatarios_contrato.classList.remove('hidden');
+                } else if (valorDocumento === 'diario_escolar') {
+                    blocosCondicionais.signatarios_diario.classList.remove('hidden');
+                }
+            } else {
+                 // Garante que os signatários fiquem escondidos se o checkbox for desmarcado
+                 blocosCondicionais.signatarios_contrato.classList.add('hidden');
+                 blocosCondicionais.signatarios_diario.classList.add('hidden');
+            }
+        }
+    }
+
+    // --- EVENT LISTENERS ---
+
+    // Abrir o Popup
+    if (openBtn) {
+        openBtn.addEventListener('click', function () {
+            popupOverlay.classList.remove('hidden');
+            resetPopup();
+        });
+    }
+
+    // Fechar o Popup
+    if(closeBtn) {
+        closeBtn.addEventListener('click', function () {
+            popupOverlay.classList.add('hidden');
+        });
+    }
+
+    // Mudar campos do formulário
+    if(documentoSelect) documentoSelect.addEventListener('change', atualizarVisibilidadeFormulario);
+    if(assinaturaCheckbox) assinaturaCheckbox.addEventListener('change', atualizarVisibilidadeFormulario);
+
+    // Clicar em "Gerar"
+    if(submitBtn) {
+        submitBtn.addEventListener('click', function () {
+            formStep.classList.add('hidden');
+            loadingStep.classList.remove('hidden');
+
+            setTimeout(function () {
+                loadingStep.classList.add('hidden');
+                successStep.classList.remove('hidden');
+            }, 2500);
+        });
+    }
+    
+    // Inicia a visibilidade correta ao carregar a página
+    atualizarVisibilidadeFormulario();
+</script>
+</body>
+
+</html>
