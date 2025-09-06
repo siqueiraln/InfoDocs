@@ -200,9 +200,11 @@ body {
     gap: 8px;
     transition: background-color 0.2s;
 }
+
 .button-primary:hover {
     background-color: #1a6dd1;
 }
+
 .button-primary i {
     font-size: 20px;
 }
@@ -376,14 +378,15 @@ body {
     color: var(--color-text-secondary);
     font-size: 20px;
 }
+
 .actions i:hover {
     color: var(--color-primary);
 }
 
-.table-header > .header-cell:nth-child(2),
-.table-header > .header-cell:nth-child(3),
-.table-row > .data-cell:nth-child(2),
-.table-row > .data-cell:nth-child(3) {
+.table-header>.header-cell:nth-child(2),
+.table-header>.header-cell:nth-child(3),
+.table-row>.data-cell:nth-child(2),
+.table-row>.data-cell:nth-child(3) {
     text-align: center;
 }
 
@@ -431,9 +434,11 @@ body {
 .info-card.card--pendente .card-badge {
     background-color: var(--color-warning);
 }
+
 .info-card.card--assinado .card-badge {
     background-color: var(--color-success);
 }
+
 .info-card.card--recusado .card-badge {
     background-color: var(--color-danger);
 }
@@ -474,21 +479,38 @@ body {
 
 /* --- 9. COMPONENTES: POPUP GERADOR DE DOCUMENTOS (BASEADO NO PROTÓTIPO ORIGINAL) --- */
 .popup-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    display: flex; justify-content: center; align-items: center; z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .popup-container {
-    background-color: #ffffff; border-radius: 8px;
+    background-color: #ffffff;
+    border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    width: 90%; max-width: 580px; padding: 24px;
-    position: relative; box-sizing: border-box;
+    width: 90%;
+    max-width: 580px;
+    padding: 24px;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .popup-close {
-    position: absolute; top: 16px; right: 16px; background: none;
-    border: none; font-size: 24px; color: #888; cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
 }
 
 .popup-header h2 {
@@ -514,26 +536,45 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-.popup-content .form-group { margin-bottom: 20px; }
+.popup-content .form-group {
+    margin-bottom: 20px;
+}
 
 .popup-content .form-group label {
-    display: block; font-size: 14px; font-weight: 500;
-    color: #3c3c3f; margin-bottom: 8px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3c3c3f;
+    margin-bottom: 8px;
     font-family: 'Ubuntu', sans-serif;
 }
 
-.popup-content .select-wrapper { position: relative; }
+.popup-content .select-wrapper {
+    position: relative;
+}
 
 .popup-content .select-wrapper::after {
-    content: '▼'; font-size: 12px; color: #888; position: absolute;
-    right: 15px; top: 50%; transform: translateY(-50%); pointer-events: none;
+    content: '▼';
+    font-size: 12px;
+    color: #888;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .popup-content select {
     font-family: 'Ubuntu', sans-serif;
-    width: 100%; padding: 12px 16px; border: 1px solid #d1d1d6;
-    border-radius: 6px; background-color: #fff; font-size: 16px;
-    -webkit-appearance: none; -moz-appearance: none; appearance: none;
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d1d6;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     cursor: pointer;
 }
 
@@ -564,32 +605,54 @@ body {
 }
 
 .form-group-checkbox {
-    display: flex; align-items: center; gap: 10px; margin-top: 24px;
-    background-color: #f9f9f9; padding: 12px; border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 6px;
 }
 
 .form-group-checkbox input[type="checkbox"] {
-    width: 18px; height: 18px;
+    width: 18px;
+    height: 18px;
     accent-color: #007aff;
 }
+
 .form-group-checkbox label {
-    margin-bottom: 0; font-weight: 500; color: #3c3c3f; cursor: pointer;
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #3c3c3f;
+    cursor: pointer;
     font-family: 'Ubuntu', sans-serif;
 }
 
-.popup-footer { margin-top: 32px; }
+.popup-footer {
+    margin-top: 32px;
+}
 
 .popup-submit {
     font-family: 'Ubuntu', sans-serif;
-    width: 100%; background-color: #007aff; color: white; border: none;
-    padding: 14px; border-radius: 6px; font-size: 16px;
+    width: 100%;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
     font-weight: 700;
-    cursor: pointer; transition: background-color 0.2s;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
-.popup-submit:hover { background-color: #0056b3; }
+
+.popup-submit:hover {
+    background-color: #0056b3;
+}
 
 /* Estilos para os Passos do Popup */
-#loading-step, #success-step {
+#loading-step,
+#success-step {
     padding: 40px 20px;
     text-align: center;
 }
@@ -605,8 +668,13 @@ body {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #loading-step p {
@@ -663,6 +731,7 @@ body {
     background-color: var(--color-background);
     border-radius: 6px;
 }
+
 .progress-text {
     display: flex;
     justify-content: space-between;
@@ -671,10 +740,12 @@ body {
     color: var(--color-text-secondary);
     margin-bottom: 8px;
 }
+
 .progress-text strong {
     color: var(--color-text-primary);
     font-weight: 700;
 }
+
 .progress-bar {
     width: 100%;
     height: 8px;
@@ -682,6 +753,7 @@ body {
     border-radius: 4px;
     overflow: hidden;
 }
+
 .progress-bar-fill {
     height: 100%;
     background-color: var(--color-primary);
@@ -691,9 +763,9 @@ body {
 
 .form-group-checkbox {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
-    background-color: #FAFBFC; 
+    background-color: #FAFBFC;
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 15px;
@@ -706,11 +778,293 @@ body {
     gap: 8px;
 }
 
-.feedback-wrapper {
-}
+.feedback-wrapper {}
 
 .signature-feedback {
     font-size: 12px;
     font-weight: 500;
     color: var(--color-text-secondary);
+}
+
+/* --- 10. COMPONENTES: POPUP DE AÇÕES DO DOCUMENTO --- */
+.popup-overlay-viewer {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup-container-viewer {
+    background: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-header-viewer {
+    padding: 24px 24px 0 24px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.popup-title-viewer {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 24px;
+}
+
+.close-button-viewer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.2s ease;
+}
+
+.close-button-viewer:hover {
+    color: #374151;
+}
+
+.document-section-viewer {
+    padding: 0 24px 24px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.document-info-viewer {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.document-title-viewer {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.document-meta-viewer {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.status-container-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.status-badge-viewer {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.signatures-count-viewer {
+    background: #3b82f6;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.signatory-section-viewer {
+    margin-bottom: 24px;
+}
+
+.signatory-header-viewer {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.signatory-card-viewer {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.signatory-avatar-viewer {
+    width: 40px;
+    height: 40px;
+    background: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.signatory-details-viewer h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+.signatory-details-viewer p {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.signatory-status-viewer {
+    margin-left: auto;
+    text-align: right;
+}
+
+.signatory-status-viewer .status-viewer {
+    font-size: 12px;
+    color: #10b981;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.signatory-status-viewer .date-viewer {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.actions-section-viewer {
+    background: #f9fafb;
+    padding: 24px;
+    border-top: 1px solid #e5e7eb;
+    flex-shrink: 0;
+}
+
+.actions-title-viewer {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.download-buttons-row-viewer {
+    display: flex;
+    flex-direction: column;
+    /* ALTERADO: para empilhar os botões */
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.action-button-viewer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    width: 100%;
+    /* Adicionado: para ocupar 100% da largura */
+}
+
+.action-button-viewer:hover {
+    border-color: #d1d5db;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.action-button-viewer.download-viewer {
+    flex-direction: row;
+    /* Mantido como linha para o ícone e texto */
+    text-align: left;
+    /* Alinha o texto à esquerda, se for o caso */
+    justify-content: flex-start;
+    /* Alinha o conteúdo à esquerda */
+}
+
+.action-button-viewer.whatsapp-viewer {
+    flex-direction: row;
+    /* Mantido como linha para o ícone e texto */
+    justify-content: flex-start;
+    /* Alinha o conteúdo à esquerda */
+}
+
+.action-icon-viewer {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+}
+
+.action-button-viewer.download-viewer .action-icon-viewer {
+    color: #10b981;
+}
+
+.action-button-viewer.whatsapp-viewer .action-icon-viewer {
+    color: #25d366;
+}
+
+.divider-viewer {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 16px 0;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .popup-container-viewer {
+        margin: 16px;
+        max-width: none;
+        border-radius: 12px;
+    }
+
+    .popup-header-viewer,
+    .document-section-viewer,
+    .actions-section-viewer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .download-buttons-row-viewer {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .action-button-viewer.download-viewer {
+        flex-direction: row;
+        text-align: left;
+    }
 }
