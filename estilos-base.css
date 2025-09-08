@@ -1068,3 +1068,104 @@ body {
         text-align: left;
     }
 }
+
+/* --- INÍCIO: ESTILOS ADICIONAIS PARA POPUP DE AÇÕES --- */
+
+/* Ajuste no card do signatário para comportar o botão de reenviar */
+.signatory-card-viewer {
+    gap: 16px;
+    /* Aumenta o espaçamento interno */
+    margin-bottom: 12px;
+    /* Adiciona espaço entre os cards */
+}
+
+/* Estilo para o avatar de quem já assinou */
+.signatory-avatar-viewer.signed {
+    background-color: #6b7280;
+    /* Cor cinza para diferenciar */
+}
+
+
+/* Novo botão de reenviar link */
+.resend-button-viewer {
+    margin-left: auto;
+    /* Joga o botão para a direita */
+    background-color: #f3f4f6;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #4b5563;
+    transition: all 0.2s ease;
+}
+
+.resend-button-viewer:hover {
+    background-color: #e5e7eb;
+    color: var(--color-primary);
+}
+
+/* Ajuste no container de ações inferior */
+.actions-section-viewer {
+    background: #f9fafb;
+    padding: 24px;
+    border-top: 1px solid #e5e7eb;
+    flex-shrink: 0;
+}
+
+/* Novo container para os botões de ação */
+.action-buttons-container-viewer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Estilo base para todos os botões de ação */
+.action-button-viewer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+}
+
+.action-button-viewer:hover {
+    border-color: #d1d5db;
+    background-color: #f9fafb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Ícones dos botões de ação */
+.action-icon-viewer {
+    color: #6b7280;
+}
+
+.action-icon-viewer.download-icon {
+    color: var(--color-primary);
+}
+
+.action-icon-viewer.whatsapp-icon {
+    color: #25d366;
+}
+
+
+/* Badge de status do documento */
+.status-badge-viewer.status--pending {
+    background-color: #FFF8E6;
+    color: #B4880B;
+}
+
+/* --- FIM: ESTILOS ADICIONAIS PARA POPUP DE AÇÕES --- */
